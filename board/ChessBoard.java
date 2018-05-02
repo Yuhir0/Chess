@@ -33,6 +33,7 @@ public class ChessBoard {
 		chessmen.add(new Knight("b8",'b')); chessmen.add(new Knight("g8",'b'));
 		chessmen.add(new Bishop("c8",'b')); chessmen.add(new Bishop("f8",'b'));
 		chessmen.add(new Queen("d8",'b')); chessmen.add(new King("e8",'b'));
+		selectChessmen("e8");
 	}
 	
 	public void selectChessmen (String position) throws Exception {
@@ -40,6 +41,14 @@ public class ChessBoard {
 			chessmenSelected = cheesmenOn(position);
 		} else {
 			throw InvalidPosition;
+		}
+	}
+	
+	public char chessmenSelectedColor() {
+		try {
+			return chessmenSelected.getColor();
+		} catch (Exception e) {
+			return 0;
 		}
 	}
 	
@@ -87,16 +96,15 @@ public class ChessBoard {
 		return null;
 	}
 	
-	
 	public String toString() {
 		String concat = "  +---+---+---+---+---+---+---+---+\n";
 		boolean check = false;
-		/*ArrayList<String> preview = new ArrayList<String>();
+		ArrayList<String> preview = new ArrayList<String>();
 		try {
 			preview = chessmenSelected.previewMovement();
 		} catch (Exception e) {
 			preview = null;
-		}*/
+		}
 		for (int n = 7; n > -1; n--) {
 			concat += numRow[n] + " |";
 			for (int a = 0; a < 8; a++) {
@@ -106,7 +114,18 @@ public class ChessBoard {
 						check = true;
 						break;
 					}
-					//if (check) {break;}
+					
+					if (preview != null && preview.indexOf(alphaRow[a]+""+numRow[n]) != -1) {
+						if (check) {
+							if (chessmenSelected != null && chessmenSelected.getColor() != chessmen.get(c).getColor()) {
+								concat = concat.substring(0,concat.length()-2) + "]|";
+							}
+						} else {
+							concat += "[ ]|";
+							check = true;
+						}
+					}
+					if (check) {break;}
 				}
 				if (!check) {
 					concat += "   |";
