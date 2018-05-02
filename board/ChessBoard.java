@@ -13,6 +13,7 @@ public class ChessBoard {
 	private Chessmen chessmenSelected = null;
 	
 	Exception InvalidPosition;
+	Exception NoneChessmenSelected;
 	
 	public ChessBoard () throws Exception {
 		for (int j = 0; j < 8; j++) {
@@ -31,10 +32,7 @@ public class ChessBoard {
 		chessmen.add(new Rook("a8",'b')); chessmen.add(new Rook("h8",'b'));
 		chessmen.add(new Knight("b8",'b')); chessmen.add(new Knight("g8",'b'));
 		chessmen.add(new Bishop("c8",'b')); chessmen.add(new Bishop("f8",'b'));
-		chessmen.add(new Queen("d8",'b')); chessmen.add(new King("e5",'b'));
-		
-		selectChessmen("e5");
-		System.out.println(chessmenSelected.getName());
+		chessmen.add(new Queen("d8",'b')); chessmen.add(new King("e8",'b'));
 	}
 	
 	public void selectChessmen (String position) throws Exception {
@@ -49,8 +47,12 @@ public class ChessBoard {
 		if (chessmenSelected != null) {
 			ArrayList<String> preview = chessmenSelected.previewMovement();
 			if (preview.indexOf(position) >= 0) {
-				
+				chessmenSelected.moveTo(position);
+			} else {
+				throw InvalidPosition;
 			}
+		} else {
+			throw NoneChessmenSelected;
 		}
 	}
 	
@@ -85,15 +87,16 @@ public class ChessBoard {
 		return null;
 	}
 	
+	
 	public String toString() {
 		String concat = "  +---+---+---+---+---+---+---+---+\n";
 		boolean check = false;
-		ArrayList<String> preview = new ArrayList<String>();
+		/*ArrayList<String> preview = new ArrayList<String>();
 		try {
 			preview = chessmenSelected.previewMovement();
 		} catch (Exception e) {
 			preview = null;
-		}
+		}*/
 		for (int n = 7; n > -1; n--) {
 			concat += numRow[n] + " |";
 			for (int a = 0; a < 8; a++) {
@@ -101,9 +104,9 @@ public class ChessBoard {
 					if (chessmen.get(c).getPosition().equals(alphaRow[a]+""+numRow[n])) {
 						concat += chessmen.get(c).getName() + " |";
 						check = true;
+						break;
 					}
-					
-					if (check) {break;}
+					//if (check) {break;}
 				}
 				if (!check) {
 					concat += "   |";

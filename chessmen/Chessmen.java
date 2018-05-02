@@ -33,7 +33,13 @@ public class Chessmen {
 	}
 	
 	public void moveTo(String new_position) throws Exception {
-		position = new_position;
+		ArrayList<String> posible = this.previewMovement();
+		
+		if (posible.indexOf(new_position) >= 0) {
+			this.position = new_position;
+		} else {
+			throw InvalidPosition;
+		}
 	}
 	
 	public ArrayList<String> previewMovement() {
