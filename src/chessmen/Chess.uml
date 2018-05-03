@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_ccKLYEb_EeioIqRptN2rEg" name="Chess">
+    <eAnnotations xmi:id="_chIK8Eb_EeioIqRptN2rEg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_chIK8Ub_EeioIqRptN2rEg" source="codegen">
+        <details xmi:id="_chIK8kb_EeioIqRptN2rEg" key="codegenDirectory" value="/Chess/src"/>
+        <details xmi:id="_dRnMsEb_EeioIqRptN2rEg" key="AssociatedSourceCode" value="/Chess/src/chessmen/Rook.java;2674512980/1;/Chess/src/chessmen/Bishop.java;1325966747/1;/Chess/src/chessmen/Queen.java;4105526422/1;/Chess/src/chessmen/King.java;1278408175/1;/Chess/src/chessmen/Knight.java;1335758182/1;/Chess/src/chessmen/Pawn.java;3288179492/1;/Chess/src/chessmen/Chessmen.java;785780101/1;/Chess/src/board/ChessBoard.java;470031310/0;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_cuXVsEb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_cuZK4Eb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_cuZx8Eb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_cuaZAEb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_cuaZAUb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_cuaZAkb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_cubAEEb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_cubAEUb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_cucOMEb_EeioIqRptN2rEg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_cuq3sEb_EeioIqRptN2rEg" name="chessmen">
+      <packagedElement xmi:type="uml:Class" xmi:id="_cvvOsEb_EeioIqRptN2rEg" name="Rook">
+        <generalization xmi:id="_czKWIEb_EeioIqRptN2rEg" general="_cwIQQEb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0MQ4Eb_EeioIqRptN2rEg" name="Rook" specification="_cvzgIEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0MQ4Ub_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0MQ4kb_EeioIqRptN2rEg" type="_cvvOsEb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>super(position);
+		// TODO Auto-generated constructor stub
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cvzgIEb_EeioIqRptN2rEg" name="Rook" method="_c0MQ4Eb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cv0uQEb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cv0uQUb_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cvzgIUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cv0uQkb_EeioIqRptN2rEg" type="_cvvOsEb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cv18YEb_EeioIqRptN2rEg" name="Bishop">
+        <generalization xmi:id="_czKWIUb_EeioIqRptN2rEg" general="_cwIQQEb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0UzwEb_EeioIqRptN2rEg" name="Bishop" specification="_cv2jcEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0UzwUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0Uzwkb_EeioIqRptN2rEg" type="_cv18YEb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>super(position);
+		// TODO Auto-generated constructor stub
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cv2jcEb_EeioIqRptN2rEg" name="Bishop" method="_c0UzwEb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cv3KgEb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cv3KgUb_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cv2jcUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cv3Kgkb_EeioIqRptN2rEg" type="_cv18YEb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cv4_sEb_EeioIqRptN2rEg" name="Queen">
+        <generalization xmi:id="_czKWIkb_EeioIqRptN2rEg" general="_cwIQQEb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0WB4Eb_EeioIqRptN2rEg" name="Queen" specification="_cv5mwEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0Wo8Eb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0Wo8Ub_EeioIqRptN2rEg" type="_cv4_sEb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>super(position);
+		// TODO Auto-generated constructor stub
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cv5mwEb_EeioIqRptN2rEg" name="Queen" method="_c0WB4Eb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cv5mwkb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cv5mw0b_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cv5mwUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cv6N0Eb_EeioIqRptN2rEg" type="_cv4_sEb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cv604Eb_EeioIqRptN2rEg" name="King">
+        <generalization xmi:id="_czK9MEb_EeioIqRptN2rEg" general="_cwIQQEb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0XQAEb_EeioIqRptN2rEg" name="King" specification="_cv94MEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0XQAUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0XQAkb_EeioIqRptN2rEg" type="_cv604Eb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>super(position);
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cv94MEb_EeioIqRptN2rEg" name="King" method="_c0XQAEb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cv_GUEb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cv_GUUb_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cv-fQEb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cv_GUkb_EeioIqRptN2rEg" type="_cv604Eb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cwCJoEb_EeioIqRptN2rEg" name="Knight">
+        <generalization xmi:id="_czK9MUb_EeioIqRptN2rEg" general="_cwIQQEb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0YeIEb_EeioIqRptN2rEg" name="Knight" specification="_cwCwsEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0YeIUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0YeIkb_EeioIqRptN2rEg" type="_cwCJoEb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>super(position);
+		// TODO Auto-generated constructor stub
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cwCwsEb_EeioIqRptN2rEg" name="Knight" method="_c0YeIEb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cwDXwEb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cwDXwUb_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cwCwsUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cwDXwkb_EeioIqRptN2rEg" type="_cwCJoEb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cwD-0Eb_EeioIqRptN2rEg" name="Pawn">
+        <generalization xmi:id="_czOnkEb_EeioIqRptN2rEg" general="_cwIQQEb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0ZsQEb_EeioIqRptN2rEg" name="Pawn" specification="_cwFM8Eb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0ZsQUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0ZsQkb_EeioIqRptN2rEg" type="_cwD-0Eb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>super(position);
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0a6YEb_EeioIqRptN2rEg" name="moveTo" specification="_cwGbEEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0a6YUb_EeioIqRptN2rEg" name="new_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>char[] num_row = ChessBoard.getNum_row();
+		char[] alpha_row = ChessBoard.getAlpha_row();
+		
+		if (position.charAt(0) == position.charAt(0)) {
+			
+		}
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cwFM8Eb_EeioIqRptN2rEg" name="Pawn" method="_c0ZsQEb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cwF0AEb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cwF0AUb_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cwFM8Ub_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cwF0Akb_EeioIqRptN2rEg" type="_cwD-0Eb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_cwGbEEb_EeioIqRptN2rEg" name="moveTo" method="_c0a6YEb_EeioIqRptN2rEg" raisedException="_czgUYUb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_cwGbEUb_EeioIqRptN2rEg" name="new_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cwIQQEb_EeioIqRptN2rEg" name="Chessmen">
+        <ownedAttribute xmi:id="_cztvwEb_EeioIqRptN2rEg" name="position" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_czu94Eb_EeioIqRptN2rEg" name="InvalidPosition" visibility="package" type="_czgUYUb_EeioIqRptN2rEg" association="_c0o80Eb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0bhcEb_EeioIqRptN2rEg" name="Chessmen" specification="_cwJeYEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0bhcUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0bhckb_EeioIqRptN2rEg" type="_cwIQQEb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>this.position = position;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0cIgEb_EeioIqRptN2rEg" name="getPosition" specification="_cwKFcUb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0cIgUb_EeioIqRptN2rEg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return position;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0dWoEb_EeioIqRptN2rEg" name="moveTo" specification="_cwKsgEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0dWoUb_EeioIqRptN2rEg" name="new_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>position = new_position;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cwJeYEb_EeioIqRptN2rEg" name="Chessmen" method="_c0bhcEb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cwJeYkb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cwJeY0b_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cwJeYUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cwKFcEb_EeioIqRptN2rEg" type="_cwIQQEb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_cwKFcUb_EeioIqRptN2rEg" name="getPosition" method="_c0cIgEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_cwKFckb_EeioIqRptN2rEg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_cwKsgEb_EeioIqRptN2rEg" name="moveTo" method="_c0dWoEb_EeioIqRptN2rEg" raisedException="_czgUYUb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_cwKsgUb_EeioIqRptN2rEg" name="new_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_c0o80Eb_EeioIqRptN2rEg" name="" memberEnd="_c0o80Ub_EeioIqRptN2rEg _czu94Eb_EeioIqRptN2rEg">
+        <ownedEnd xmi:id="_c0o80Ub_EeioIqRptN2rEg" name="" type="_cwIQQEb_EeioIqRptN2rEg" association="_c0o80Eb_EeioIqRptN2rEg"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_cu3sAEb_EeioIqRptN2rEg" name="board">
+      <packagedElement xmi:type="uml:Class" xmi:id="_cwNv0Eb_EeioIqRptN2rEg" name="ChessBoard">
+        <ownedAttribute xmi:id="_czxaIEb_EeioIqRptN2rEg" name="num_row" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_czzPUEb_EeioIqRptN2rEg" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_cz1rkEb_EeioIqRptN2rEg" value="{'1','2','3','4','5','6','7','8'}"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_cz3gwEb_EeioIqRptN2rEg" name="alpha_row" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cz4H0Ub_EeioIqRptN2rEg" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_cz4u4Ub_EeioIqRptN2rEg" value="{'a','b','c','d','e','f','g','h'}"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_cz6kEEb_EeioIqRptN2rEg" name="white" visibility="private" type="_cwIQQEb_EeioIqRptN2rEg" association="_c0qyAEb_EeioIqRptN2rEg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cz6kEUb_EeioIqRptN2rEg" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_cz7LIEb_EeioIqRptN2rEg" value="new Chessmen[16]"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_cz7yMUb_EeioIqRptN2rEg" name="black" visibility="private" type="_cwIQQEb_EeioIqRptN2rEg" association="_c0tOQEb_EeioIqRptN2rEg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cz7yMkb_EeioIqRptN2rEg" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_cz8ZQUb_EeioIqRptN2rEg" value="new Chessmen[16]"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_cz9AUUb_EeioIqRptN2rEg" name="InvalidPosition" visibility="package" type="_czgUYUb_EeioIqRptN2rEg" association="_c0vqgUb_EeioIqRptN2rEg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0fy4Eb_EeioIqRptN2rEg" name="ChessBoard" specification="_cwW5wEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0fy4Ub_EeioIqRptN2rEg" type="_cwNv0Eb_EeioIqRptN2rEg" direction="return"/>
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 8; i++) {
+			white[i] = new Pawn(alpha_row[i] + &quot;2&quot;);
+			black[i] = new Pawn(alpha_row[i] + &quot;7&quot;);
+		}
+		white[9] = new Rook(&quot;a1&quot;);
+		black[9] = new Rook(&quot;a8&quot;);
+		white[10] = new Knight(&quot;b1&quot;);
+		black[10] = new Knight(&quot;b8&quot;);
+		white[11] = new Bishop(&quot;c1&quot;);
+		black[11] = new Bishop(&quot;c8&quot;);
+		white[12] = new Queen(&quot;d1&quot;);
+		black[12] = new Queen(&quot;d8&quot;);
+		white[13] = new King(&quot;e1&quot;);
+		black[13] = new King(&quot;e8&quot;);
+		white[14] = new Bishop(&quot;f1&quot;);
+		black[14] = new Bishop(&quot;f8&quot;);
+		white[15] = new Knight(&quot;g1&quot;);
+		black[15] = new Knight(&quot;g8&quot;);
+		white[16] = new Rook(&quot;h1&quot;);
+		black[16] = new Rook(&quot;h8&quot;);
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0fy4kb_EeioIqRptN2rEg" name="moveTo" specification="_cwYH4Eb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0fy40b_EeioIqRptN2rEg" name="color">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0fy5Eb_EeioIqRptN2rEg" name="initial_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0fy5Ub_EeioIqRptN2rEg" name="new_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Chessmen[] chessmens;
+		if (!(validPosition(initial_position) &amp;&amp; validPosition(new_position))) {
+			throw InvalidPosition;
+		}
+		if (color == 0) {
+			chessmens = white;
+		} else {
+			chessmens = black;
+		}
+		boolean valid = false;
+		for (Chessmen c: chessmens) {
+			if (initial_position.toLowerCase().equals(c.getPosition())) {
+				for (Chessmen cc: chessmens) {
+					if (new_position.equals(cc.getPosition())) {
+						break;
+					}
+				}
+				c.moveTo(new_position);
+				valid = true;
+				break;
+			}
+		}
+		if (!valid) {
+			throw InvalidPosition;
+		}
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_c0gZ8Eb_EeioIqRptN2rEg" name="validPosition" specification="_cwZWAEb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_c0gZ8Ub_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_c0gZ8kb_EeioIqRptN2rEg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>try {
+			char alpha = position.toLowerCase().charAt(0);
+			char num = position.charAt(1);
+			if (Arrays.binarySearch(alpha_row, alpha) > 0 &amp;&amp; Arrays.binarySearch(num_row,num) > 0) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+			return false;
+		}
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_cwW5wEb_EeioIqRptN2rEg" name="ChessBoard" method="_c0fy4Eb_EeioIqRptN2rEg">
+          <eAnnotations xmi:id="_cwW5wUb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_cwW5wkb_EeioIqRptN2rEg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_cwW5w0b_EeioIqRptN2rEg" type="_cwNv0Eb_EeioIqRptN2rEg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_cwYH4Eb_EeioIqRptN2rEg" name="moveTo" method="_c0fy4kb_EeioIqRptN2rEg" raisedException="_czgUYUb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_cwYH4Ub_EeioIqRptN2rEg" name="color">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cwYH4kb_EeioIqRptN2rEg" name="initial_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cwYH40b_EeioIqRptN2rEg" name="new_position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_cwZWAEb_EeioIqRptN2rEg" name="validPosition" isStatic="true" method="_c0gZ8Eb_EeioIqRptN2rEg">
+          <ownedParameter xmi:id="_cwZWAUb_EeioIqRptN2rEg" name="position">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_cwZ9EEb_EeioIqRptN2rEg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_c0qyAEb_EeioIqRptN2rEg" name="" memberEnd="_c0qyAUb_EeioIqRptN2rEg _cz6kEEb_EeioIqRptN2rEg">
+        <ownedEnd xmi:id="_c0qyAUb_EeioIqRptN2rEg" name="" type="_cwNv0Eb_EeioIqRptN2rEg" association="_c0qyAEb_EeioIqRptN2rEg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_c0tOQEb_EeioIqRptN2rEg" name="" memberEnd="_c0tOQUb_EeioIqRptN2rEg _cz7yMUb_EeioIqRptN2rEg">
+        <ownedEnd xmi:id="_c0tOQUb_EeioIqRptN2rEg" name="" type="_cwNv0Eb_EeioIqRptN2rEg" association="_c0tOQEb_EeioIqRptN2rEg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_c0vqgUb_EeioIqRptN2rEg" name="" memberEnd="_c0vqgkb_EeioIqRptN2rEg _cz9AUUb_EeioIqRptN2rEg">
+        <ownedEnd xmi:id="_c0vqgkb_EeioIqRptN2rEg" name="" type="_cwNv0Eb_EeioIqRptN2rEg" association="_c0vqgUb_EeioIqRptN2rEg"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_cu4TEEb_EeioIqRptN2rEg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_cu4TEUb_EeioIqRptN2rEg" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_czLkQEb_EeioIqRptN2rEg" name="Arrays"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_czgUYEb_EeioIqRptN2rEg" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_czgUYUb_EeioIqRptN2rEg" name="Exception"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_chJZEEb_EeioIqRptN2rEg">
+      <eAnnotations xmi:id="_chJZEUb_EeioIqRptN2rEg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_chJZEkb_EeioIqRptN2rEg" base_Package="_ccKLYEb_EeioIqRptN2rEg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_czOAgEb_EeioIqRptN2rEg" base_Element="_czLkQEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Reference xmi:id="_cziwoEb_EeioIqRptN2rEg" base_Element="_czgUYUb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_czuW0Eb_EeioIqRptN2rEg" base_Element="_cztvwEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_czwMAEb_EeioIqRptN2rEg" base_Element="_czu94Eb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_czyoQEb_EeioIqRptN2rEg" base_Element="_czxaIEb_EeioIqRptN2rEg">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_cz2SoEb_EeioIqRptN2rEg" name="getNum_row" isStatic="true" method="_c0d9sEb_EeioIqRptN2rEg">
+      <ownedParameter xmi:id="_cz25sEb_EeioIqRptN2rEg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cz25sUb_EeioIqRptN2rEg" value="*"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Array xmi:id="_cz0dcEb_EeioIqRptN2rEg" base_Element="_czxaIEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Array xmi:id="_cz25skb_EeioIqRptN2rEg" base_Element="_cz2SoEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cz4H0Eb_EeioIqRptN2rEg" base_Element="_cz3gwEb_EeioIqRptN2rEg">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_cz5V8Eb_EeioIqRptN2rEg" name="getAlpha_row" isStatic="true" method="_c0fL0kb_EeioIqRptN2rEg">
+      <ownedParameter xmi:id="_cz5V8Ub_EeioIqRptN2rEg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cz5V8kb_EeioIqRptN2rEg" value="*"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Array xmi:id="_cz4u4Eb_EeioIqRptN2rEg" base_Element="_cz3gwEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Array xmi:id="_cz59AEb_EeioIqRptN2rEg" base_Element="_cz5V8Eb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Array xmi:id="_cz6kEkb_EeioIqRptN2rEg" base_Element="_cz6kEEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cz7yMEb_EeioIqRptN2rEg" base_Element="_cz6kEEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Array xmi:id="_cz8ZQEb_EeioIqRptN2rEg" base_Element="_cz7yMUb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cz9AUEb_EeioIqRptN2rEg" base_Element="_cz7yMUb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cz9nYEb_EeioIqRptN2rEg" base_Element="_cz9AUUb_EeioIqRptN2rEg"/>
+  <uml:OpaqueBehavior xmi:id="_c0d9sEb_EeioIqRptN2rEg" name="getNum_row" specification="_cz2SoEb_EeioIqRptN2rEg">
+    <ownedParameter xmi:id="_c0fL0Eb_EeioIqRptN2rEg" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c0fL0Ub_EeioIqRptN2rEg" value="*"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return num_row;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_c0fL0kb_EeioIqRptN2rEg" name="getAlpha_row" specification="_cz5V8Eb_EeioIqRptN2rEg">
+    <ownedParameter xmi:id="_c0fL00b_EeioIqRptN2rEg" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c0fL1Eb_EeioIqRptN2rEg" value="*"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return alpha_row;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_c0qK8Eb_EeioIqRptN2rEg" base_Element="_c0o80Eb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Reference xmi:id="_c0sAIEb_EeioIqRptN2rEg" base_Element="_c0qyAEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Reference xmi:id="_c0vqgEb_EeioIqRptN2rEg" base_Element="_c0tOQEb_EeioIqRptN2rEg"/>
+  <UMLLabProfile:Reference xmi:id="_c0yGwEb_EeioIqRptN2rEg" base_Element="_c0vqgUb_EeioIqRptN2rEg"/>
+</xmi:XMI>
