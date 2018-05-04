@@ -11,29 +11,30 @@ public class ChessBoard {
 	
 	private ArrayList<Chessmen> chessmen = new ArrayList<Chessmen>();
 	private Chessmen chessmenSelected = null;
+	private ArrayList<String> posibleMovements = new ArrayList<String>();
 	
 	Exception InvalidPosition;
 	Exception NoneChessmenSelected;
 	
 	public ChessBoard () throws Exception {
 		for (int j = 0; j < 8; j++) {
-			chessmen.add(new Pawn(alphaRow[j]+"2",'b'));
+			chessmen.add(new Pawn(alphaRow[j]+"2",'w'));
 		}
 		
 		for (int j = 0; j < 8; j++) {
-			chessmen.add(new Pawn(alphaRow[j]+"7",'w'));
+			chessmen.add(new Pawn(alphaRow[j]+"7",'b'));
 		}
 		
 		chessmen.add(new Rook("a1",'w')); chessmen.add(new Rook("h1",'w'));
 		chessmen.add(new Knight("b1",'w')); chessmen.add(new Knight("g1",'w'));
 		chessmen.add(new Bishop("c1",'w')); chessmen.add(new Bishop("f1",'w'));
-		chessmen.add(new Queen("d1",'w')); chessmen.add(new King("e1",'w'));
+		chessmen.add(new Queen("d4",'w')); chessmen.add(new King("e1",'w'));
 		
 		chessmen.add(new Rook("a8",'b')); chessmen.add(new Rook("h8",'b'));
 		chessmen.add(new Knight("b8",'b')); chessmen.add(new Knight("g8",'b'));
 		chessmen.add(new Bishop("c8",'b')); chessmen.add(new Bishop("f8",'b'));
 		chessmen.add(new Queen("d8",'b')); chessmen.add(new King("e8",'b'));
-		selectChessmen("e8");
+		selectChessmen("d4");
 	}
 	
 	public void selectChessmen (String position) throws Exception {
@@ -98,8 +99,9 @@ public class ChessBoard {
 	
 	public String toString() {
 		String concat = "  +---+---+---+---+---+---+---+---+\n";
-		boolean check = false;
+		boolean done = false;
 		ArrayList<String> preview = new ArrayList<String>();
+		posibleMovements = new ArrayList<String>();
 		try {
 			preview = chessmenSelected.previewMovement();
 		} catch (Exception e) {
@@ -111,30 +113,34 @@ public class ChessBoard {
 				for (int c = 0; c < chessmen.size() ; c++) {
 					if (chessmen.get(c).getPosition().equals(alphaRow[a]+""+numRow[n])) {
 						concat += chessmen.get(c).getName() + " |";
-						check = true;
-						break;
+						done = true;
 					}
 					
 					if (preview != null && preview.indexOf(alphaRow[a]+""+numRow[n]) != -1) {
-						if (check) {
-							if (chessmenSelected != null && chessmenSelected.getColor() != chessmen.get(c).getColor()) {
-								concat = concat.substring(0,concat.length()-2) + "]|";
-							}
-						} else {
+						if (done && chessmenSelected != null && chessmenSelected.getColor() != chessmen.get(c).getColor()) {
+							concat = concat.substring(0,concat.length()-2) + "]|";
+							posibleMovements.add(alphaRow[a]+""+numRow[n]);
+						} else if(c + 1 == chessmen.size()){
 							concat += "[ ]|";
-							check = true;
+							posibleMovements.add(alphaRow[a]+""+numRow[n]);
+							done = true;
 						}
 					}
-					if (check) {break;}
+					if (done) {break;}
 				}
-				if (!check) {
+				if (!done) {
 					concat += "   |";
 				}
-				check = false;
+				done = false;
 			}
 			concat += "\n  +---+---+---+---+---+---+---+---+\n";
 		}
 		concat += "    a   b   c   d   e   f   g   h";
 		return concat;
+	}
+	
+	public static void main (String[] args) throws Exception {
+		ChessBoard board = new ChessBoard();
+		System.out.println(board);
 	}
 }
