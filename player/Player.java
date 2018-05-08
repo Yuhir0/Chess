@@ -35,7 +35,11 @@ public class Player {
 	
 	public void setColor(String color) throws Exception {
 		if (isValidString(color)) {
-			this.color = color;
+			if (color.equals("black") || color.equals("white")) {
+				this.color = color;
+			}else {
+				throw InvalidColor;
+			}
 		}else {
 			throw InvalidColor;
 		}
