@@ -61,15 +61,16 @@ public class Player {
         return m.matches();
 	}
 	
-	private static boolean isValidString(String name)
-	{
+	private static boolean isValidString(String name) {
 	    name = name.trim(); //Delete white spaces at the end and start
 
-	    if(name == null || name.equals(""))
+	    if(name == null || name.equals("")) {
 	        return false;
+	    }
 
-	    if(!name.matches("[a-zA-Z]*"))
+	    if(!name.matches("[a-zA-Z]*")) {
 	        return false;
+	    }
 
 	    return true;
 	}
