@@ -6,6 +6,8 @@ public class Player {
 	public String color;
 	public String name;
 	protected Exception InvalidEmail;
+	protected Exception InvalidColor;
+	protected Exception InvalidName;
 	
 	//Constructors
 	public Player(String email, String color, String name) throws Exception {
@@ -31,16 +33,24 @@ public class Player {
 		return this.color;
 	}
 	
-	public void setColor(String color) {
-		this.color = color;
+	public void setColor(String color) throws Exception {
+		if (isValidString(color)) {
+			this.color = color;
+		}else {
+			throw InvalidColor;
+		}
 	}
 	
 	public String getName() {
 		return this.name;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String name) throws Exception {
+		if (isValidString(name)) {
+			this.name = name;
+		}else {
+			throw InvalidName;
+		}
 	}
 	
 	//Methods
@@ -49,5 +59,18 @@ public class Player {
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();
+	}
+	
+	private static boolean isValidString(String name)
+	{
+	    name = name.trim(); //Delete white spaces at the end and start
+
+	    if(name == null || name.equals(""))
+	        return false;
+
+	    if(!name.matches("[a-zA-Z]*"))
+	        return false;
+
+	    return true;
 	}
 }
