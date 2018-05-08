@@ -64,7 +64,7 @@ public class Player {
 	private static boolean isValidString(String name) {
 	    name = name.trim(); //Delete white spaces at the end and start
 
-	    if(name == null || name.equals("")) {
+	    if(name == null || name.equals("") || name.length() > 20) {
 	        return false;
 	    }
 
