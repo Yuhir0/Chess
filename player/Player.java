@@ -3,8 +3,8 @@ package player;
 public class Player {
 	//Propieties
 	private String email;
-	public String color;
-	public String name;
+	private String color;
+	private String name;
 	protected Exception InvalidEmail;
 	protected Exception InvalidColor;
 	protected Exception InvalidName;
