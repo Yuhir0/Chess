@@ -50,7 +50,7 @@ public class ChessBoard {
 		cells[7][2] = new Bishop("c8",'b'); cells[7][5] = new Bishop("f8",'b');
 		cells[7][3] = new Queen("d8",'b'); cells[7][4] = new King("e8",'b');
 		
-		selectChessmen("d1");
+		selectChessmen("d7");
 		/*chessmen.add(new Rook("a1",'w')); chessmen.add(new Rook("h1",'w'));
 		chessmen.add(new Knight("b1",'w')); chessmen.add(new Knight("g1",'w'));
 		chessmen.add(new Bishop("c1",'w')); chessmen.add(new Bishop("f1",'w'));
