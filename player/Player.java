@@ -1,16 +1,16 @@
 package player;
 
 public class Player {
-	//Propieties
+	//Properties
 	private String email;
-	private String color;
+	private char color;
 	private String name;
 	protected Exception InvalidEmail;
 	protected Exception InvalidColor;
 	protected Exception InvalidName;
 	
 	//Constructors
-	public Player(String email, String color, String name) throws Exception {
+	public Player(String email, char color, String name) throws Exception {
 		setEmail(email);
 		setColor(color);
 		setName(name);
@@ -29,17 +29,13 @@ public class Player {
 		}
 	}
 	
-	public String getColor() {
+	public char getColor() {
 		return this.color;
 	}
 	
-	public void setColor(String color) throws Exception {
-		if (isValidString(color)) {
-			if (color.equals("black") || color.equals("white")) {
-				this.color = color;
-			}else {
-				throw InvalidColor;
-			}
+	public void setColor(char color) throws Exception {
+		if (color == 'B' || color == 'W') {
+			this.color = color;
 		}else {
 			throw InvalidColor;
 		}
