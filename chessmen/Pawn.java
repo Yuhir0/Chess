@@ -6,19 +6,13 @@ import java.util.Arrays;
 import board.ChessBoard;
 
 public class Pawn extends Chessmen{
-	private String initPosition;
 	public Pawn (String position, char color) throws Exception {
 		super(position, color);
 		name = "P" + color;
-		initPosition = position;
 	}
 	
 	public ArrayList<String> previewMovement() {
-		int[][] posible = {{0,1},{1,1},{-1,1},{0,0}};
-		if (position == initPosition) {
-			posible[3][0] = 0;
-			posible[3][1] = 2;
-		}
+		int[][] posible = {{0,2},{0,-2},{0,1},{0,-1},{1,1},{-1,-1},{1,-1},{-1,1}};
 	
 		ArrayList<String> positions = new ArrayList<String>();
 		char[] numRow = ChessBoard.getNumRow();
