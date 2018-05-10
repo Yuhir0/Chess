@@ -20,8 +20,8 @@ public class Match {
 		email = Inputs.str_input("Player 2, enter your email: ");
 		players[1] = new Player(email,'b',name);
 		while (chessBoard.match()) {
-			System.out.println(chessBoard);
 			do {
+				System.out.println(chessBoard);
 				input = Inputs.str_input("["+players[turn].getName()+"]('h' to help): ");
 			}while(!options(input,chessBoard));
 			if (turn == 0) {
