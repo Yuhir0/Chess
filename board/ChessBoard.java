@@ -63,6 +63,11 @@ public class ChessBoard {
 		}
 	}
 	
+	public void desselectChessmen() {
+		chessmenSelected = null;
+		posibleMovements = new ArrayList<String>();
+	}
+	
 	public char chessmenSelectedColor() {
 		try {
 			return chessmenSelected.getColor();
@@ -79,10 +84,6 @@ public class ChessBoard {
 				int alpha = index(alphaRow,chessmenSelected.getPosition().charAt(0));
 				int destNum = index(numRow,position.charAt(1));
 				int destAlpha = index(alphaRow,position.charAt(0));
-				
-				if (chessmenSelected.getName().charAt(0) == 'P' && chessmenSelected.getPosition().charAt(0) == position.charAt(0) && cells[destNum][destAlpha] != null) {
-					throw InvalidPosition;
-				}
 				
 				cells[destNum][destAlpha] = cells[num][alpha];
 				cells[num][alpha] = null;
@@ -150,7 +151,16 @@ public class ChessBoard {
 		return this.match;
 	}
 	
-	private int index (char[] arr, char c) {
+	private int cell (String pos, char color) {
+		if (cells[index(numRow,pos.charAt(1))][index(alphaRow,pos.charAt(0))] != null && cells[index(numRow,pos.charAt(1))][index(alphaRow,pos.charAt(0))].getColor() == color) {
+			return 1;
+		} else if (cells[index(numRow,pos.charAt(1))][index(alphaRow,pos.charAt(0))] == null) {
+			return 0;
+		}
+		return -1;
+	}
+	
+	public static int index (char[] arr, char c) {
 		return Arrays.binarySearch(arr, c);
 	}
 	
