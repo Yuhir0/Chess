@@ -21,7 +21,7 @@ public class Pawn extends Chessmen{
 				Arrays.binarySearch(alphaRow, this.position.charAt(0))};
 		for (int i = 0; i < posible.length; i++) {
 			try {
-				positions.add(alphaRow[actualPosition[1]+posible[i][1]] + "" + numRow[actualPosition[0]+posible[i][0]]);
+				positions.add(alphaRow[actualPosition[1]+posible[i][0]] + "" + numRow[actualPosition[0]+posible[i][1]]);
 			} catch (Exception e) {}
 		}
 		

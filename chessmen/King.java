@@ -6,7 +6,7 @@ import java.util.Arrays;
 import board.ChessBoard;
 
 public class King extends Chessmen {
-
+	
 	public King(String position, char color) throws Exception {
 		super(position, color);
 		name = "K" + color;

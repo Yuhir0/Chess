@@ -37,7 +37,7 @@ public class Player {
 	}
 	
 	public void setColor(char color) throws Exception {
-		if (color == 'B' || color == 'W') {
+		if (color == 'b' || color == 'w') {
 			this.color = color;
 		}else {
 			throw InvalidColor;
