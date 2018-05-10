@@ -9,7 +9,6 @@ import java.util.regex.Matcher;
 public class Match {
 	
 	public static void main(String[] args) throws Exception {
-		boolean partida = true; 
 		ChessBoard chessBoard = new ChessBoard();
 		int turn = 0;
 		Player[] players = new Player[2];
@@ -17,14 +16,14 @@ public class Match {
 		String name = Inputs.str_input("Player 1, enter your name: ");
 		String email = Inputs.str_input("Player 1, enter your email: ");
 		players[0] = new Player(email,'w',name);
-		name = Inputs.str_input("Player 1, enter your name: ");
-		email = Inputs.str_input("Player 1, enter your email: ");
+		name = Inputs.str_input("Player 2, enter your name: ");
+		email = Inputs.str_input("Player 2, enter your email: ");
 		players[1] = new Player(email,'b',name);
 		while (chessBoard.match()) {
 			System.out.println(chessBoard);
 			do {
 				input = Inputs.str_input("["+players[turn].getName()+"]('h' to help): ");
-			}while(options(input,chessBoard));
+			}while(!options(input,chessBoard));
 			if (turn == 0) {
 				turn++;
 			}else {
