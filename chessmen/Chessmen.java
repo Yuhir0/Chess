@@ -2,7 +2,7 @@ package chessmen;
 
 import java.util.ArrayList;
 
-public class Chessmen {
+public abstract class Chessmen {
 	
 	protected char color;
 	protected String position;
@@ -42,14 +42,16 @@ public class Chessmen {
 		}
 	}
 	
-	public ArrayList<String> previewMovement() {
-		return new ArrayList<String>();
-	}	
+	abstract public ArrayList<String> previewMovement();
 
 	private boolean correctColor(char color) {
 		if (color == 'w' || color == 'b') {
 			return true;
 		}
 		return false;
+	}
+	
+	public String toString() {
+		return this.name;
 	}
 }

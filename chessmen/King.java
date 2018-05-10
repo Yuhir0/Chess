@@ -6,18 +6,30 @@ import java.util.Arrays;
 import board.ChessBoard;
 
 public class King extends Chessmen {
-
+	
+	private boolean castling;
+	
 	public King(String position, char color) throws Exception {
 		super(position, color);
-		name = "K" + color;
+		this.name = "K" + color;
+		this.castling = true;
 	}
 	
-	public void moveTo(String position) {
+	public void moveTo(String new_position) throws Exception {
+		ArrayList<String> posible = this.previewMovement();
 		
+		if (posible.indexOf(new_position) >= 0) {
+			this.position = new_position;
+			if (castling) {
+				castling = false;
+			}
+		} else {
+			throw InvalidPosition;
+		}
 	}
 	
 	public ArrayList<String> previewMovement() {
-		int[][] posible = {{1,0},{1,1},{0,1},{-1,1},{-1,0},{-1,-1},{0,-1},{1,-1}};
+		int[][] posible = {{1,0},{1,1},{0,1},{-1,1},{-1,0},{-1,-1},{0,-1},{1,-1},{2,0},{-2,0}};
 		ArrayList<String> positions = new ArrayList<String>();
 		char[] numRow = ChessBoard.getNumRow();
 		char[] alphaRow = ChessBoard.getAlphaRow();
@@ -30,5 +42,9 @@ public class King extends Chessmen {
 		}
 		
 		return positions;
+	}
+	
+	public boolean castling() {
+		return this.castling;
 	}
 }
