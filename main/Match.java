@@ -4,21 +4,28 @@ import board.ChessBoard;
 import input.Inputs;
 import player.Player;
 import java.util.regex.Pattern;
+import java.io.IOException;
 import java.util.regex.Matcher;
 
 public class Match {
+	private static Player[] players = new Player[2];
+	private static int turn = 0;
 	
 	public static void main(String[] args) throws Exception {
+		
 		ChessBoard chessBoard = new ChessBoard();
-		int turn = 0;
-		Player[] players = new Player[2];
 		String input;
-		String name = Inputs.str_input("Player 1, enter your name: ");
-		String email = Inputs.str_input("Player 1, enter your email: ");
+		String email;
+		String name;
+		
+		name = validName("Player White, enter your name: ");
+		email = validMail("Player White, enter your email: ");
 		players[0] = new Player(email,'w',name);
-		name = Inputs.str_input("Player 2, enter your name: ");
-		email = Inputs.str_input("Player 2, enter your email: ");
+		
+		name = validName("Player Black, enter your name: ");
+		email = validMail("Player Black, enter your email: ");
 		players[1] = new Player(email,'b',name);
+		
 		while (chessBoard.match()) {
 			do {
 				System.out.println(chessBoard);
@@ -33,29 +40,36 @@ public class Match {
 	}
 	
 	public static boolean options(String option, ChessBoard chessBoard) throws Exception {
+		
 		switch (option.toLowerCase().charAt(0)) {
+		
 			case 's':
-				if (Pattern.compile("s\\s+[a-h][1-8]").matcher(option).matches()) {
+				if (Pattern.compile("s\\s[a-h][1-8]").matcher(option).matches()) {
 					try {
 						chessBoard.selectChessmen(option.substring(2));
-						return true;
+						if (chessBoard.chessmenSelectedColor() != players[turn].getColor()) {
+							chessBoard.desselectChessmen();
+						}
 					}catch(Exception e) {
+						
 						System.out.println(e.getMessage());
-						return false;
 					}
+					
 				}
 				return false;
+				
 			case 'm':
-				if (Pattern.compile("m\\s+([a-h][1-8]\\s?){2}").matcher(option).matches()) {
+				if (Pattern.compile("m\\s([a-h][1-8]\\s?){2}").matcher(option).matches()) {
 					try {
-						chessBoard.selectChessmen(option.substring(2));
-						chessBoard.moveTo(option.substring(2));
+						String[] split = option.split(" ");
+						chessBoard.selectChessmen(split[1]);
+						chessBoard.moveTo(split[2]);
 						return true;
 					}catch(Exception e) {
 						System.out.println(e.getMessage());
 						return false;
 					}
-				} else if (Pattern.compile("m\\s+[a-h][1-8]").matcher(option).matches()) {
+				} else if (Pattern.compile("m\\s[a-h][1-8]").matcher(option).matches()) {
 					try {
 						chessBoard.moveTo(option.substring(2));
 						return true;
@@ -67,15 +81,35 @@ public class Match {
 					System.out.println("Error: The syntax of the command is incorrect\nFor more info type 'h'");
 					return false;
 				}
+				
 			case 'h':
 				menu();
 				return false;
+				
 			default:
 				System.out.println("Invalid Option, try again.");
 				return false;
 			}
 	}
+	
+	public static String validMail(String text) throws IOException {
+		String email;
+		do {
+			email = Inputs.str_input(text);
+		}while(!Player.isValidEmail(email));
+		return email;
+	}
+	
+	public static String validName(String text) throws IOException {
+		String name;
+		do {
+			name = Inputs.str_input(text);
+		}while(!Player.isValidString(name));
+		return name;
+	}	
+	
 	public static void menu() {
+		
 		System.out.println("+------------------------------------------+");
 		System.out.println("|Type 'm' and position to move the Chessmen|");
 		System.out.println("|if you would type a single position, you  |");

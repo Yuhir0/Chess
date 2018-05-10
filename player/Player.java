@@ -64,7 +64,7 @@ public class Player {
         return m.matches();
 	}
 	
-	private static boolean isValidString(String str) {
+	public static boolean isValidString(String str) {
 		str = str.trim(); //Delete white spaces at the end and start
 
 	    if(str == null || str.equals("") || str.length() > 20) {
