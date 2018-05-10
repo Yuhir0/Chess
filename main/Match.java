@@ -38,8 +38,10 @@ public class Match {
 				if (Pattern.compile("s\\s+[a-h][1-8]").matcher(option).matches()) {
 					try {
 						chessBoard.selectChessmen(option.substring(2));
+						return true;
 					}catch(Exception e) {
 						System.out.println(e.getMessage());
+						return false;
 					}
 				}
 				return false;
@@ -61,12 +63,15 @@ public class Match {
 						System.out.println(e.getMessage());
 						return false;
 					}
+				} else {
+					System.out.println("Error: The syntax of the command is incorrect\nFor more info type 'h'");
+					return false;
 				}
 			case 'h':
 				menu();
-				return true;
+				return false;
 			default:
-				
+				System.out.println("Invalid Option, try again.");
 				return false;
 			}
 	}
