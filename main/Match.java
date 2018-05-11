@@ -1,3 +1,4 @@
+// Dani
 package main;
 
 import board.ChessBoard;
@@ -7,29 +8,28 @@ import java.util.regex.Pattern;
 import java.io.IOException;
 import java.util.regex.Matcher;
 
-public class Match {
+public class Match{
 	private static Player[] players = new Player[2];
 	private static int turn = 0;
-	
+	private static ChessBoard chessBoard;
 	public static void main(String[] args) throws Exception {
-		
-		ChessBoard chessBoard = new ChessBoard();
+		chessBoard = new ChessBoard();
 		String input;
 		String email;
 		String name;
 		
 		name = validName("Player White, enter your name: ");
-		email = validMail("Player White, enter your email: ");
+		email = validEmail("Player White, enter your email: ");
 		players[0] = new Player(email,'w',name);
 		
 		name = validName("Player Black, enter your name: ");
-		email = validMail("Player Black, enter your email: ");
+		email = validEmail("Player Black, enter your email: ");
 		players[1] = new Player(email,'b',name);
 		
 		while (chessBoard.match()) {
 			do {
 				System.out.println(chessBoard);
-				input = Inputs.str_input("["+players[turn].getName()+"]('h' to help): ");
+				input = Inputs.str_input("["+players[turn].getName()+" "+players[turn].getColor()+"]('h' to help): ");
 			}while(!options(input,chessBoard));
 			if (turn == 0) {
 				turn++;
@@ -47,14 +47,10 @@ public class Match {
 				if (Pattern.compile("s\\s[a-h][1-8]").matcher(option).matches()) {
 					try {
 						chessBoard.selectChessmen(option.substring(2));
-						if (chessBoard.chessmenSelectedColor() != players[turn].getColor()) {
-							chessBoard.desselectChessmen();
-						}
+						validColor();
 					}catch(Exception e) {
-						
 						System.out.println(e.getMessage());
 					}
-					
 				}
 				return false;
 				
@@ -64,6 +60,7 @@ public class Match {
 						String[] split = option.split(" ");
 						chessBoard.selectChessmen(split[1]);
 						chessBoard.moveTo(split[2]);
+						validColor();
 						return true;
 					}catch(Exception e) {
 						System.out.println(e.getMessage());
@@ -92,7 +89,7 @@ public class Match {
 			}
 	}
 	
-	public static String validMail(String text) throws IOException {
+	public static String validEmail(String text) throws IOException {
 		String email;
 		do {
 			email = Inputs.str_input(text);
@@ -108,6 +105,12 @@ public class Match {
 		return name;
 	}	
 	
+	public static void validColor() {
+		if (chessBoard.chessmenSelectedColor() != players[turn].getColor()) {
+			chessBoard.desselectChessmen();
+		}
+	}
+
 	public static void menu() {
 		
 		System.out.println("+------------------------------------------+");
