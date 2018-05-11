@@ -1,3 +1,4 @@
+//Marc Fors
 package player;
 
 import java.util.regex.Pattern;
@@ -49,7 +50,7 @@ public class Player {
 	}
 	
 	public void setName(String name) throws Exception {
-		if (isValidString(name)) {
+		if (isValidName(name)) {
 			this.name = name;
 		}else {
 			throw InvalidName;
@@ -64,7 +65,7 @@ public class Player {
         return m.matches();
 	}
 	
-	public static boolean isValidString(String str) {
+	public static boolean isValidName(String str) {
 		str = str.trim(); //Delete white spaces at the end and start
 
 	    if(str == null || str.equals("") || str.length() > 20) {
