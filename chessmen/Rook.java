@@ -46,4 +46,13 @@ public class Rook extends Chessmen {
 		
 		return positions;
 	}
+	/*
+	public static void main(String[] args) throws Exception {
+		Rook rook = new Rook("d4",'w');
+		ArrayList<String> positions = rook.previewMovement();
+		for (int i = 0; i < positions.size(); i++) {
+			System.out.println(positions.get(i));
+		}
+	}
+	*/
 }

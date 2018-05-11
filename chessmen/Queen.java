@@ -65,4 +65,13 @@ public class Queen extends Chessmen {
 		
 		return positions;
 	}
+	/*
+	public static void main(String[] args) throws Exception {
+		Queen queen = new Queen("d4",'w');
+		ArrayList<String> positions = queen.previewMovement();
+		for (int i = 0; i < positions.size(); i++) {
+			System.out.println(positions.get(i));
+		}
+	}
+	*/
 }

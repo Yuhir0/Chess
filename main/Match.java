@@ -59,8 +59,8 @@ public class Match{
 					try {
 						String[] split = option.split(" ");
 						chessBoard.selectChessmen(split[1]);
-						chessBoard.moveTo(split[2]);
 						validColor();
+						chessBoard.moveTo(split[2]);
 						return true;
 					}catch(Exception e) {
 						System.out.println(e.getMessage());

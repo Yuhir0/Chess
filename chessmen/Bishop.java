@@ -46,4 +46,13 @@ public class Bishop extends Chessmen {
 		
 		return positions;
 	}
+	/*
+	public static void main(String[] args) throws Exception {
+		Bishop bishop = new Bishop("d4",'w');
+		ArrayList<String> positions = bishop.previewMovement();
+		for (int i = 0; i < positions.size(); i++) {
+			System.out.println(positions.get(i));
+		}
+	}
+	*/
 }
