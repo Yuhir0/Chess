@@ -36,14 +36,4 @@ public class Pawn extends Chessmen{
 		}
 		return positions;
 	}
-	
-	/*
-	public static void main(String[] args) throws Exception {
-		Pawn pawn = new Pawn("c5",'w');
-		ArrayList<String> positions = pawn.previewMovement();
-		for (int i = 0; i < positions.size(); i++) {
-			System.out.println(positions.get(i));
-		}
-	}
-	*/
 }

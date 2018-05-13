@@ -30,14 +30,4 @@ public class Knight extends Chessmen {
 		}
 		return positions;
 	}
-	
-	/*
-	public static void main(String[] args) throws Exception {
-		Knight knight= new Knight("f3",'w');
-		ArrayList<String> positions = knight.previewMovement();
-		for (int i = 0; i < positions.size(); i++) {
-			System.out.println(positions.get(i));
-		}
-	}
-	*/
 }
