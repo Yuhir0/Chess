@@ -101,7 +101,7 @@ public class Match{
 		String name;
 		do {
 			name = Inputs.str_input(text);
-		}while(!Player.isValidString(name));
+		}while(!Player.isValidName(name));
 		return name;
 	}	
 	
