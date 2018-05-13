@@ -78,4 +78,35 @@ public class Player {
 
 	    return true;
 	}
+	
+	/*
+	public static void main(String[] args) throws Exception {
+		//comentar todas la pruebas menos la que se quiere probar
+		//Todo ok
+		Player player= new Player("marcfs31@gmail.com",'b',"Marc");
+		System.out.println("Color: "+player.color);
+		System.out.println("email: "+player.email);
+		System.out.println("name: "+player.name);
+		
+		//Primero mal
+		Player player2= new Player("marcfs31@gmail..com",'b',"Marc");
+		System.out.println("Color: "+player2.color);
+		System.out.println("email: "+player2.email);
+		System.out.println("name: "+player2.name);
+		
+		//Primero mal
+		Player player3= new Player("marcfs31@gmail..com",'b',"Marc");
+		System.out.println("Color: "+player3.color);
+		System.out.println("email: "+player3.email);
+		System.out.println("name: "+player3.name);
+				
+				
+		//Primero mal
+		Player player4= new Player("marcfs31@gmail..com",'b',"Marc");
+		System.out.println("Color: "+player4.color);
+		System.out.println("email: "+player4.email);
+		System.out.println("name: "+player4.name);
+		
+	}
+	*/
 }

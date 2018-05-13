@@ -6,7 +6,6 @@ import input.Inputs;
 import player.Player;
 import java.util.regex.Pattern;
 import java.io.IOException;
-import java.util.regex.Matcher;
 
 public class Match{
 	private static Player[] players = new Player[2];
