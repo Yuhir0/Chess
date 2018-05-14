@@ -2,7 +2,6 @@ package chessmen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import board.ChessBoard;
 
 public class King extends Chessmen {

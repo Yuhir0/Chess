@@ -84,7 +84,9 @@ public class ChessBoard {
 				int alpha = index(alphaRow,chessmenSelected.getPosition().charAt(0));
 				int destNum = index(numRow,position.charAt(1));
 				int destAlpha = index(alphaRow,position.charAt(0));
-				
+				if (cells[destNum][destAlpha] != null && cells[destNum][destAlpha].getName().charAt(0) == 'K') {
+					this.match = false;
+				}
 				cells[destNum][destAlpha] = cells[num][alpha];
 				cells[num][alpha] = null;
 				chessmenSelected.moveTo(position);
